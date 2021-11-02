@@ -75,7 +75,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-
+console.log(5, 4)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -88,8 +88,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(age){
-  return age * 7;
+function dogYears(humanYears){
+  return humanYears * 7;
 }
 
 
@@ -128,7 +128,7 @@ function hungryDog(weight, age){
     return weight * 0.04;
   } else if (age >= 1 && weight >=11 && weight <= 15){
     return weight * 0.03;
-  } else if (age >= 1 && weight >=16){
+  } else if (age >= 1 && weight > 15){
     return weight * 0.02;
   } else if (age <= 11 && age >=0.583){
     return weight * 0.04;
@@ -162,9 +162,14 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
-}
+// function game(user, computer){
+//   if (user === scissors && computer === paper) {
+//     return 'you win!';
+//   } else if (user = rock && computer = scissors) {
+
+//   }
+// }
+
 
 
 
@@ -179,10 +184,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * .621371; 
 }
-
 
 
 //Task 5b - Feet to CM
@@ -193,8 +197,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
 
 
@@ -209,8 +213,12 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number, numberLeftOver){
+      for (let i = 99; i > 1 i--){
+        if (i >= 99) {
+          return "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall";
+        }
+      }
 }
 
 
@@ -229,10 +237,19 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(num){
+ if (num >= 90){
+   return 'you got an A';
+  } else if (num <= 89 && num >= 80){
+   return 'you got a B';
+  } else if (num <= 79 && num >= 70){
+    return 'you got a C';
+  } else if (num <= 69 && num >= 60){
+    return 'you got a D';
+  } else if (num <= 59){
+    return 'you got a F';
+  }
 }
-
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
