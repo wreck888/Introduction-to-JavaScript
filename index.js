@@ -38,6 +38,7 @@ Do the following:
 
    HINT: no function required
 */
+
 num1 = 1;
 num2 = 2;
 if (num1){
@@ -58,8 +59,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-let year = 1999;
-year.toString()
+let year = new Number(1999)
+console.log(year.valueOf())
 
 
 
@@ -75,7 +76,7 @@ Do the following:
 function multiply(a, b){
   return a * b;
 }
-console.log(5, 4)
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -162,13 +163,23 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-// function game(user, computer){
-//   if (user === scissors && computer === paper) {
-//     return 'you win!';
-//   } else if (user = rock && computer = scissors) {
-
-//   }
-// }
+function game(user, computer){
+  if (user === 'scissors' && computer === 'paper') {
+    return 'you win!';
+  } else if (user === 'rock' && computer === 'scissors') {
+    return 'you win!';
+  } else if (user === 'rock' && computer === 'paper') {
+    return 'you lose!';
+  } else if (user === 'scissors' && computer === 'rock') {
+    return 'you lose!';
+  } else if (user === 'paper' && computer === 'scissors') {
+    return 'you lose!';
+  } else if (user === 'paper' && computer === 'rock') {
+    return 'you win!';
+  } else if (user === computer) {
+    return "it's a tie!";
+  }
+}
 
 
 
@@ -213,12 +224,12 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(number, numberLeftOver){
-      for (let i = 99; i > 1 i--){
-        if (i >= 99) {
-          return "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall";
-        }
-      }
+function annoyingSong(i){
+  for (let i = 99; i > 0; i--){
+    if (i >= 0) {
+      console.log(i + " bottles of soda on the wall, " + i + " bottles of soda, take one down pass it around " + (i-1) + " bottles of soda on the wall");
+    }
+  }
 }
 
 
